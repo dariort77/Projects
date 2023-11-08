@@ -1,0 +1,10 @@
+SELECT
+    description AS Crime_Description,
+    COUNT(description) AS Frequency
+FROM
+    `bigquery-public-data.austin_crime.crime`
+GROUP BY
+    description
+ORDER BY
+    Frequency DESC
+LIMIT 1;
